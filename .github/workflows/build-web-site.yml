@@ -29,7 +29,7 @@ jobs:
       - name: Build Microdown image
         run: |
           ./build-image.sh
-          ./pharo Pharo.image MicBlogCreator createFrom: 'src' to: '_site'
+          ./pharo Pharo.image eval "MicBlogCreator createFrom: 'src' to: '_site'"
           
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.6.1
